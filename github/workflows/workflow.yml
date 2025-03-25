@@ -1,0 +1,13 @@
+name: Greeting Workflow
+
+on: [push]  # Trigger on every push
+
+jobs:
+  greet:
+    runs-on: ubuntu-latest  # Use the latest Ubuntu environment
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4  # Fetch code from the repo
+
+      - name: Say hello
+        run: echo "Hello, GitHub Actions!"
